@@ -1,0 +1,18 @@
+﻿# 运行数据与密钥：永不入库
+data/
+config.json
+prompts.json
+*.bak
+*.bak-*
+*.tar.gz
+node_modules/
+dist/
+# 学生与班级数据
+roster.json
+student_records.json
+student_profiles/
+# 本地环境
+.env
+*.log
+.DS_Store
+Thumbs.db

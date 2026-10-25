@@ -1,0 +1,3 @@
+﻿interface:
+  display_name: "Xinglin Teaching Platform（杏林问诊台）"
+  short_description: "Architecture, modules, data contracts and scoring rules for the Xinglin MedSim AI teaching platform"
