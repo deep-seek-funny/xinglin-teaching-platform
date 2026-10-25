@@ -33,6 +33,10 @@
 | `references/algorithms.md` | 评分归一化、查重、建造评分、事实限分、个性化路径的伪代码 |
 | `references/prompts-and-rubrics.md` | 患者/四评委/图谱评分/复习规划的提示词骨架与量规 |
 | `assets/templates/` | 规则卡、病例、量规、档案记录的可套用 JSON 模板 |
+| `references/reproduction-guide.md` | 从零复现：技术选型、目录结构、六阶段与验收清单 |
+| `references/algorithms.md` | 评分归一化、查重、建造评分、事实限分、个性化路径的伪代码 |
+| `references/prompts-and-rubrics.md` | 患者/四评委/图谱评分/复习规划的提示词骨架与量规 |
+| `assets/templates/` | 规则卡、病例、量规、档案记录的可套用 JSON 模板 |
 | `references/model-apis.md` | DeepSeek / 豆包方舟文本、TTS、ASR、全双工实时语音的请求参数与场景建议 |
 | `references/deployment.md` | 本地运行、生产拓扑、备份、发布流程与风险 |
 | `references/known-issues.md` | 审计出的缺陷清单与修复优先级 |
@@ -75,6 +79,17 @@
 ![PBL 复盘：讨论实录映射到知识节点与补练建议（匿名学生）](assets/screenshots/pbl-path.png)
 
 *PBL 复盘：讨论实录映射到知识节点与补练建议（匿名学生）*
+
+## 快速复现（约 2–3 周）
+
+1. 写一页**规则卡**（`assets/templates/rule-card.md`）：一个能力点、怎么判、留什么证据。
+2. 搭**最小闭环**：一个页面 + 三个函数（组装提示 / 调模型 / 写记录），记录能追到原话。
+3. 接**第二个模块**，复用同一套鉴权、记录、看板——不改第一个模块的代码。
+4. 上**评分与查重**：温度 0、JSON 输出、引用原文；短文本 n-gram 查重。
+5. 做**个性化路径**：证据 → 短板 → 任务卡（任务/时限/验收）→ 完成回写。
+6. 加**看板与导出**，区分活动指标与效果指标，演示数据显式标注。
+
+详细步骤、目录结构、每个阶段的验收标准与常见坑见 `references/reproduction-guide.md`。
 
 ## 快速复现（约 2–3 周）
 
