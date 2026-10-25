@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+  <rect width="1200" height="620" fill="#F7F5F0"/>
+  <text x="60" y="62" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#101B2A">图谱建造评分：先拦掉无效调用，再按结构结算</text>
+  <text x="60" y="92" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#6E7C8A">总分不是百分制；它是"持续建构积分"，无上限，只奖励新增的有效知识</text>
+
+  <defs>
+    <marker id="g1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0E7C6B"/>
+    </marker>
+    <marker id="g2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#BA4B45"/>
+    </marker>
+  </defs>
+
+  <!-- 流程 -->
+  <g font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#101B2A" text-anchor="middle">
+    <rect x="60" y="140" width="170" height="76" rx="8" fill="#FFFFFF" stroke="#DADFD9"/><text x="145" y="170">作品快照</text><text x="145" y="192" font-size="11" fill="#6E7C8A">节点 + 边 + 原文</text>
+    <rect x="268" y="140" width="190" height="76" rx="8" fill="#FFFFFF" stroke="#DADFD9"/><text x="363" y="170">归一化 + 去重</text><text x="363" y="192" font-size="11" fill="#6E7C8A">内容哈希指纹</text>
+    <rect x="496" y="140" width="230" height="76" rx="8" fill="#F8EFDF" stroke="#C08A2E"/><text x="611" y="164">门禁：是否值得调用</text><text x="611" y="184" font-size="11" fill="#8A5A1E">无新条目 / 全孤立 / 已评</text><text x="611" y="202" font-size="11" fill="#8A5A1E">→ 直接返回"未变化"</text>
+    <rect x="764" y="140" width="180" height="76" rx="8" fill="#FFFFFF" stroke="#DADFD9"/><text x="854" y="170">模型评审</text><text x="854" y="192" font-size="11" fill="#6E7C8A">奖项 + 质量分 + 评语</text>
+  </g>
+  <line x1="230" y1="178" x2="264" y2="178" stroke="#0E7C6B" stroke-width="2" marker-end="url(#g1)"/>
+  <line x1="458" y1="178" x2="492" y2="178" stroke="#0E7C6B" stroke-width="2" marker-end="url(#g1)"/>
+  <line x1="726" y1="178" x2="760" y2="178" stroke="#0E7C6B" stroke-width="2" marker-end="url(#g1)"/>
+  <!-- 门禁 0 调用分支 -->
+  <path d="M 611 216 L 611 244 L 940 244 L 940 216" fill="none" stroke="#BA4B45" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#g2)"/>
+  <text x="720" y="264" font-family="Microsoft YaHei, sans-serif" font-size="11.5" fill="#BA4B45">不调模型、不占额度、不加分</text>
+
+  <!-- 基础分 -->
+  <text x="60" y="322" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0E7C6B">基础分（逐条校验后才计）</text>
+  <g font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#2A3648" text-anchor="middle">
+    <rect x="60" y="340" width="150" height="58" rx="8" fill="#E6F3EF" stroke="#0E7C6B"/><text x="135" y="366">概念</text><text x="135" y="388" font-weight="700" fill="#0E7C6B">+2</text>
+    <rect x="230" y="340" width="150" height="58" rx="8" fill="#E6F3EF" stroke="#0E7C6B"/><text x="305" y="366">细节</text><text x="305" y="388" font-weight="700" fill="#0E7C6B">+1</text>
+    <rect x="400" y="340" width="150" height="58" rx="8" fill="#E6F3EF" stroke="#0E7C6B"/><text x="475" y="366">机制</text><text x="475" y="388" font-weight="700" fill="#0E7C6B">+2</text>
+    <rect x="570" y="340" width="150" height="58" rx="8" fill="#E6F3EF" stroke="#0E7C6B"/><text x="645" y="366">关系</text><text x="645" y="388" font-weight="700" fill="#0E7C6B">+2</text>
+  </g>
+  <text x="750" y="366" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#6E7C8A">证据须能在原文近似匹配；孤立节点不计分；</text>
+  <text x="750" y="388" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#6E7C8A">同类重复去重；条目不存在直接丢弃。</text>
+
+  <!-- 结算公式 -->
+  <rect x="60" y="432" width="1080" height="118" rx="10" fill="#FFFFFF" stroke="#C08A2E"/>
+  <text x="86" y="466" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="700" fill="#C08A2E">结算分 = round( 基础分 × K × Q )</text>
+  <text x="86" y="498" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#2A3648">K（结构系数）= 0.7 + 0.6 × min( 边数 ÷ 连通节点数 ÷ 1.5 , 1 )，上限 1.3</text>
+  <text x="86" y="524" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#2A3648">Q（质量系数）= 模型 1–5 分时 0.7 + 0.15×(分-1)；缺失时用本地启发式（关系多样性 / 内容充实度 / 连通覆盖），封顶 1.15</text>
+
+  <!-- 记账 -->
+  <g font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#101B2A" text-anchor="middle">
+    <rect x="60" y="572" width="250" height="34" rx="6" fill="#F3F6F9" stroke="#DADFD9"/><text x="185" y="594">台账：已认可条目永久记录</text>
+    <rect x="326" y="572" width="250" height="34" rx="6" fill="#F3F6F9" stroke="#DADFD9"/><text x="451" y="594">已评指纹：避免重复计分</text>
+    <rect x="592" y="572" width="250" height="34" rx="6" fill="#F3F6F9" stroke="#DADFD9"/><text x="717" y="594">历史：每轮增量与系数</text>
+    <rect x="858" y="572" width="282" height="34" rx="6" fill="#F8EFDF" stroke="#C08A2E"/><text x="999" y="594" fill="#8A5A1E">总分：以上增量累加，无上限</text>
+  </g>
+</svg>

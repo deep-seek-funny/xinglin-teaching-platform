@@ -70,6 +70,10 @@ AI 能力（可替换）：文本模型 ｜ 语音识别/合成/全双工 ｜ �
 4. 前端改动必须真浏览器验证；语法检查不等于功能通过。
 5. 发布与已知缺陷见 [deployment.md](references/deployment.md)、[known-issues.md](references/known-issues.md)。
 
+## 图示与截图
+
+`assets/diagrams/` 是四张机制示意图（SVG），`assets/screenshots/` 是六张已匿名的界面截图；用于快速理解模块形态，不参与技能执行。
+
 ## 范围边界
 
 - 描述某课程平台的某一版工程形态；模块会继续变化，以代码为准。

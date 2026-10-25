@@ -33,6 +33,45 @@
 | `references/deployment.md` | 本地运行、生产拓扑、备份、发布流程与风险 |
 | `references/known-issues.md` | 审计出的缺陷清单与修复优先级 |
 
+## 预览
+
+### 架构与机制（SVG，可点开看大图）
+
+![四层架构与三流](assets/diagrams/architecture.svg)
+
+![模拟问诊两条链路与四评委评分](assets/diagrams/simulation-scoring.svg)
+
+![图谱建造评分流程](assets/diagrams/build-score.svg)
+
+![个性化路径闭环](assets/diagrams/personalized-path.svg)
+
+
+### 界面截图（真实系统，学生身份已匿名；病例为虚构）
+
+![模拟问诊：思考模式（右侧为问诊清单与四维训练要点）](assets/screenshots/sim-think.png)
+
+*模拟问诊：思考模式（右侧为问诊清单与四维训练要点）*
+
+![教师数据大屏：全班训练记录、迭代轨迹与热力矩阵](assets/screenshots/dashboard.png)
+
+*教师数据大屏：全班训练记录、迭代轨迹与热力矩阵*
+
+![主动知识图谱：学生从空白开始建构，节点带哈希 ID](assets/screenshots/graph-builder.png)
+
+*主动知识图谱：学生从空白开始建构，节点带哈希 ID*
+
+![MDT 会诊：医生工作站形态的有状态任务](assets/screenshots/mdt.png)
+
+*MDT 会诊：医生工作站形态的有状态任务*
+
+![复习路径：从错点到任务与验收（匿名学生）](assets/screenshots/review-path.png)
+
+*复习路径：从错点到任务与验收（匿名学生）*
+
+![PBL 复盘：讨论实录映射到知识节点与补练建议（匿名学生）](assets/screenshots/pbl-path.png)
+
+*PBL 复盘：讨论实录映射到知识节点与补练建议（匿名学生）*
+
 ## 怎么用
 
 **作为 Codex / DSH 技能**：把本目录放进技能目录，涉及该平台时会自动加载，也可显式调用。

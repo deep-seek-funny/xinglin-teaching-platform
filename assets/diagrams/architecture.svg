@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <rect width="1200" height="700" fill="#F7F5F0"/>
+  <text x="60" y="72" font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#101B2A">平台架构：四层 + 三流</text>
+  <text x="60" y="104" font-family="Microsoft YaHei, sans-serif" font-size="15" fill="#6E7C8A">界面负责呈现，引擎负责教学逻辑，模型只做计算，证据库记住每一次尝试</text>
+
+  <!-- 层 1 -->
+  <rect x="60" y="140" width="820" height="96" rx="10" fill="#1E3952"/>
+  <text x="86" y="180" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#7EC8E8">界面层</text>
+  <text x="86" y="208" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9D3DE">学生端 · 教师端 · 数据大屏</text>
+  <text x="300" y="180" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#9FB1C4">谁能做什么</text>
+
+  <!-- 层 2 -->
+  <rect x="60" y="256" width="820" height="96" rx="10" fill="#103A35"/>
+  <text x="86" y="296" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#6FD6C0">教学引擎层（自建核心）</text>
+  <text x="86" y="324" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9D3DE">任务编排 · 规则判定 · 证据账本 · 迭代通道</text>
+  <text x="560" y="296" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#9FB1C4">教学逻辑在这里，所以必须自己掌控</text>
+
+  <!-- 层 3 -->
+  <rect x="60" y="372" width="820" height="96" rx="10" fill="#2B2442"/>
+  <text x="86" y="412" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#B69CE8">AI 能力层（可替换）</text>
+  <text x="86" y="440" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9D3DE">DeepSeek 文本 · 豆包语音（ASR/TTS/全双工）· 图像检测</text>
+  <text x="640" y="412" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#9FB1C4">换掉不影响教学规则</text>
+
+  <!-- 层 4 -->
+  <rect x="60" y="488" width="820" height="96" rx="10" fill="#222A33"/>
+  <text x="86" y="528" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#A9B6C4">基础设施层</text>
+  <text x="86" y="556" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#C9D3DE">单台服务器 · 文件存储 · 音频存储 · 鉴权 · 用量计量</text>
+  <text x="620" y="528" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#9FB1C4">越普通越好</text>
+
+  <!-- 竖向箭头 -->
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5C6C7E"/>
+    </marker>
+  </defs>
+  <line x1="160" y1="236" x2="160" y2="252" stroke="#5C6C7E" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="160" y1="352" x2="160" y2="368" stroke="#5C6C7E" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="160" y1="468" x2="160" y2="484" stroke="#5C6C7E" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 右侧三流 -->
+  <rect x="920" y="150" width="220" height="86" rx="8" fill="#FFFFFF" stroke="#DADFD9"/>
+  <text x="940" y="180" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#C08A2E">① 内容流</text>
+  <text x="940" y="204" font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#2A3648">教师改配置 →</text>
+  <text x="940" y="224" font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#2A3648">学生端立刻变</text>
+
+  <rect x="920" y="256" width="220" height="86" rx="8" fill="#FFFFFF" stroke="#DADFD9"/>
+  <text x="940" y="286" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#2F6FB0">② 证据流</text>
+  <text x="940" y="310" font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#2A3648">每次操作 →</text>
+  <text x="940" y="330" font-family="Microsoft YaHei, sans-serif" font-size="12.5" fill="#2A3648">证据库留痕</text>
+
+  <rect x="920" y="362" width="220" height="120" rx="8" fill="#F8EFDF" stroke="#C08A2E"/>
+  <text x="940" y="392" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#C08A2E">③ 反馈流 + 迭代环</text>
+  <text x="940" y="416" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#8A5A1E">证据挑短板 → 任务卡</text>
+  <text x="940" y="436" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#8A5A1E">→ 学生练 → 新证据</text>
+  <text x="940" y="462" font-family="Microsoft YaHei, sans-serif" font-size="12" font-weight="700" fill="#8A5A1E">半天到两天转一圈</text>
+
+  <text x="60" y="652" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#0E7C6B" font-weight="700">判断标准：换掉它，教学规则要不要重写？要重写 → 必须自建。</text>
+</svg>
