@@ -64,6 +64,7 @@ AI 能力（可替换）：文本模型 ｜ 语音识别/合成/全双工 ｜ �
 
 ## 怎么干活
 
+0. **要复刻**：从 [复现指南](references/reproduction-guide.md) 开始，按阶段交付；算法细节看 [算法与伪代码](references/algorithms.md)；提示词与量规照 [提示词模板](references/prompts-and-rubrics.md) 写；JSON 结构直接套 [模板](assets/templates/)。
 1. 先读 [架构总览](references/architecture.md) 与 [数据与评分口径](references/data-and-scoring.md)；要接模型先看 [模型调用参数](references/model-apis.md)。
 2. 按任务读模块：[对话训练与评估](references/modules-simulation.md)、[图谱与图谱类作业](references/modules-graph.md)、[会诊/PBL/核型/实验/游戏](references/modules-cases.md)。
 3. 改动前用源码核对（源码优先于文档）；链路按"界面入口 → 前端状态 → 服务端逻辑 → 鉴权 → 持久化 → 教师档案"核对。

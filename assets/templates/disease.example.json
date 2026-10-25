@@ -1,0 +1,34 @@
+{
+  "_说明": "病例 = 学生看到的事实 + 教师量规 + 提示词。以下为最小可用字段，可自行扩展。",
+  "diseases": [
+    {
+      "id": "case-tri21",
+      "name": "唐氏筛查高风险咨询",
+      "course": "genetics",
+      "level": "综合",
+      "chief": "孕 13 周，NIPT 提示 21 三体高风险，来遗传咨询门诊",
+      "patient": {
+        "name": "李某",
+        "age": 35,
+        "sex": "女",
+        "job": "教师",
+        "background": "初产妇，家人很焦虑，最担心孩子能不能要"
+      },
+      "facts": {
+        "检查": ["NIPT 21 三体高风险 1/116", "NT 2.5mm", "无创未做确诊"],
+        "病史": ["自然受孕", "无不良孕产史", "无家族史"],
+        "未主动说": ["曾有一次早期流产", "丈夫年龄 42"]
+      },
+      "limits": { "think": 3, "realtime": 2 },
+      "turn_min": 15,
+      "turn_max": 25,
+      "prompt_patient": "见 references/prompts-and-rubrics.md 第 1 节骨架",
+      "rubric_id": "rubric-consult-8x2",
+      "eval_prompt_direct": "见 references/prompts-and-rubrics.md 第 3 节（10 维）",
+      "eval_prompt_execution": "见 references/prompts-and-rubrics.md 第 3 节（6 维 + 12 题）",
+      "judge_weights": { "doctor": 0.4, "patient_sensitive": 0.25, "patient_strong": 0.25, "student": 0.1 },
+      "knowledge_files": ["files/tri21-guideline.pdf"],
+      "published": true
+    }
+  ]
+}

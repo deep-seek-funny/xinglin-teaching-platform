@@ -1,0 +1,72 @@
+{
+  "_说明": "学生档案与各模块记录示例（字段可自行裁剪，但“谁/何时/第几次/原文/评分/版本”要保留）。",
+  "profile": {
+    "key": "student:2025001",
+    "name": "学生A",
+    "id": "2025001",
+    "class": "检验2501",
+    "role": "student",
+    "revision": 42,
+    "sims": [
+      {
+        "id": "sim-001",
+        "case_id": "case-tri21",
+        "mode": "think",
+        "score": 83,
+        "date": "2026-10-12T09:20:00+08:00",
+        "turns": 18,
+        "duration_sec": 620,
+        "channel": "think_voice",
+        "transcript": [
+          { "who": "st", "text": "您好，我是遗传咨询门诊的医生，今天想和您聊聊筛查结果" },
+          { "who": "pt", "text": "医生，我这个 1/116 是不是孩子肯定有问题？" }
+        ],
+        "evaluation": "解释风险时使用了“可能”而非“一定”，但未主动说明下一步诊断路径。",
+        "dimensions": {
+          "history": { "score": 22, "comment": "家族史未追问" },
+          "clinical": { "score": 19, "comment": "筛查与诊断区分清楚" },
+          "communication": { "score": 24, "comment": "共情到位" },
+          "safety": { "score": 18, "comment": "未强调时间窗" }
+        }
+      }
+    ],
+    "prompts": [
+      {
+        "id": "prompt-001",
+        "case_id": "case-tri21",
+        "score": 94,
+        "date": "2026-10-14T20:10:00+08:00",
+        "text": "完整的提示词原文……",
+        "direct_score": 45,
+        "execution_score": 55,
+        "source": "both"
+      }
+    ],
+    "karyos": [
+      { "id": "k-001", "duration_sec": 305, "penalty_sec": 20, "errors": 2, "rounds": [ { "round": 1, "errors": 1 } ], "evaluation": "第 3 轮把 21 号误配到 22 号" }
+    ],
+    "mdts": [
+      { "id": "m-001", "session_id": "s-001", "input_hash": "ab12…", "score": 78, "dims": { "clue": 24, "check": 15, "genetics": 14, "integration": 12, "ethics": 8, "reflection": 5 }, "diagnosis_correct": true, "mode": "guided" }
+    ],
+    "diagnoses": [
+      { "id": "d-001", "mode": "main", "total": 24, "correct": 19, "score": 79, "duration_sec": 900, "node_stats": { "K1": 0.9, "K5": 0.5 } }
+    ],
+    "knowledge_graphs": {
+      "case-tri21": {
+        "completed": ["n1", "n2"],
+        "student_nodes": [ { "id": "s-n1", "label": "机制：染色体不分离", "category": "机制" } ],
+        "student_edges": [ { "from": "s-n1", "to": "n1", "type": "解释" } ],
+        "build_score": { "total": 121, "ledger": [], "reviewed": [], "history": [ { "delta": 12, "base": 10, "k": 1.1, "q": 1.09 } ] },
+        "updated_at": "2026-10-20T18:00:00+08:00",
+        "revision": 7
+      }
+    },
+    "atlas_work": {
+      "down": {
+        "entries": [ { "concept_id": "c-001", "score": 17, "awards": ["临床+2", "机制+3×4", "证据+3"] } ],
+        "total": 690,
+        "revision": 3
+      }
+    }
+  }
+}
